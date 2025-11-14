@@ -1,0 +1,18 @@
+toml
+# In your gradle/libs.versions.toml file
+
+[versions]
+# Define a version for Glide. You can name it whatever you like (e.g., glideVersion)
+glide = "4.16.0" # Use the latest stable version of Glide
+
+[libraries]
+# Alias for the main Glide library
+# The alias "glide" will be accessible as libs.glide in your build.gradle.kts
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+
+# Alias for the Glide compiler (needed for annotation processing with Kapt)
+# The alias "glide-compiler" will be accessible as libs.glide.compiler
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+[plugins]
+# ... your other plugins
