@@ -8,3 +8,4 @@ RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
 
 ##  Features
 - Fetch anime list from API using Retrofit
+-  Display anime items in a RecyclerView
