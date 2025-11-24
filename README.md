@@ -11,3 +11,4 @@ RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
 -  Display anime items in a RecyclerView
 -  Clean and simple UI layout
 -  Fast image loading with Glide
+-  *Android studio**
