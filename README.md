@@ -13,6 +13,10 @@ RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
 -  Fast image loading with Glide
 ---
 
+## 🛠️ Tech Stack
+- **Kotlin**
+- **XML Layout**
+
 ##  Concepts Covered
 - API Integration
 - RecyclerView + Adapter
