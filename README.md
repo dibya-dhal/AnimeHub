@@ -21,3 +21,5 @@ RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
 - API Integration
 - RecyclerView + Adapter
 - Kotlin basics
+- Networks calls
+- Clean UI components
