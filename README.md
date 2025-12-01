@@ -23,3 +23,5 @@ RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
 - Kotlin basics
 - Networks calls
 - Clean UI components
+
+---
