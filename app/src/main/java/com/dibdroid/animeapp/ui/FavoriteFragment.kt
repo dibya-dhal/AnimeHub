@@ -1,4 +1,4 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dibdroid.animeapp.FavoriteAdapter
+import com.dibdroid.animeapp.R
+import com.dibdroid.animeapp.data.db.AppDatabase
+import com.dibdroid.animeapp.data.db.FavoriteAnimeDao
 import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match

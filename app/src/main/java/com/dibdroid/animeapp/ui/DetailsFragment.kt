@@ -1,4 +1,4 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -9,11 +9,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.dibdroid.animeapp.R
+import com.dibdroid.animeapp.data.api.RetrofitInstance
 import kotlinx.coroutines.launch
 import kotlin.getValue
 
@@ -79,7 +79,8 @@ class DetailsFragment : Fragment() {
                 textTitle.text = anime.title
                 textType.text = getString(R.string.type_text, anime.type ?: "N/A")
                 textSource.text = getString(R.string.source_text, anime.source ?: "N/A")
-                textScore.text = getString(R.string.score_text ,
+                textScore.text = getString(
+                    R.string.score_text ,
                     getString(R.string.star_symbol),
                     anime.score.toString()
                     )

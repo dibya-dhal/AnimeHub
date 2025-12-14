@@ -1,6 +1,5 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.data.model
 
-import android.provider.MediaStore
 import com.google.gson.annotations.SerializedName
 
 data class AnimeResponse(

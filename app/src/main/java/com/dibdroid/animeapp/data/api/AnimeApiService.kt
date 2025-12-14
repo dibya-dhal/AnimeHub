@@ -1,5 +1,7 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.data.api
 
+import com.dibdroid.animeapp.data.model.Anime
+import com.dibdroid.animeapp.data.model.AnimeResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

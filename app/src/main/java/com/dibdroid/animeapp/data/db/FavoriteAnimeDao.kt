@@ -1,5 +1,6 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.data.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -8,14 +9,14 @@ import androidx.room.Query
 
 @Dao
 interface FavoriteAnimeDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.Companion.REPLACE)
     suspend fun addToFavorite(anime: FavoriteAnime)
 
     @Delete
     suspend fun removeFromFavorite(anime: FavoriteAnime)
 
     @Query("SELECT * FROM favorite_anime")
-     fun getAllFavorites() : androidx.lifecycle.LiveData<List<FavoriteAnime>>
+     fun getAllFavorites() : LiveData<List<FavoriteAnime>>
 
     @Query("SELECT * FROM favorite_anime")
     suspend fun getAllFavoritesNow(): List<FavoriteAnime>

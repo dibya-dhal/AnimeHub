@@ -1,4 +1,4 @@
-package com.dibdroid.animeapp
+package com.dibdroid.animeapp.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -8,13 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.map
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dibdroid.animeapp.AnimeAdapter
+import com.dibdroid.animeapp.R
+import com.dibdroid.animeapp.data.model.Anime
+import com.dibdroid.animeapp.data.api.RetrofitInstance
+import com.dibdroid.animeapp.data.db.AppDatabase
+import com.dibdroid.animeapp.data.db.FavoriteAnime
+import com.dibdroid.animeapp.data.db.FavoriteAnimeDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,13 +62,14 @@ class HomeFragment : Fragment() {
         Log.d("HomeFragment", "onCreateView called")
 
 
-        animeAdapter = AnimeAdapter(animeList, onItemClick = {anime ->
+        animeAdapter = AnimeAdapter(
+            animeList, onItemClick = { anime ->
 
-            val action = HomeFragmentDirections
-                .actionHomeFragmentToDetailsFragment(anime.malId)
-            findNavController().navigate(action)
+                val action = HomeFragmentDirections
+                    .actionHomeFragmentToDetailsFragment(anime.malId)
+                findNavController().navigate(action)
 
-        },
+            },
             onFavoriteClick = { anime ->
                 lifecycleScope.launch(Dispatchers.IO) {
                     val isFav = dao.isFavorites(anime.malId)
@@ -91,12 +97,12 @@ class HomeFragment : Fragment() {
                     }
 
                     val updateIds = dao.getAllFavoritesNow().map { it.maId }.toSet()
-                    lifecycleScope.launch(Dispatchers.Main){
+                    lifecycleScope.launch(Dispatchers.Main) {
                         animeAdapter.updateFavIds(updateIds)
                     }
 
-                    }
-                },
+                }
+            },
             favoriteIds = setOf()
 
         )

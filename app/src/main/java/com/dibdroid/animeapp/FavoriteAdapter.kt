@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.dibdroid.animeapp.data.db.FavoriteAnime
 import org.w3c.dom.Text
 
 class FavoriteAdapter(private var favorites : List<FavoriteAnime>, private val onRemoveClick : (FavoriteAnime) -> Unit ) :
