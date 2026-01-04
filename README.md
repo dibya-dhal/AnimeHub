@@ -1,27 +1,35 @@
-#AnimeHub  📱
+ AnimeHub 📱
 
-**AnimeHub** is a simple and clean Android app that displays a list
-of anime fetched from an online API.This project demonstrates API integraion,
-RecyclerView usage , and clean UI design using **Kotlin** and **XML layots**..
+AnimeHub is an Android application built using **Kotlin** and **MVVM architecture** that displays a list of anime fetched from a REST API.
+
+This project focuses on clean architecture, proper separation of concerns, and modern Android development practices.
 
 ---
 
 ## 🚀 Features
-- Fetch anime list from API using Retrofit
--  Display anime items in a RecyclerView
--  Clean and simple UI layout
--  Fast image loading with Glide
+- Fetch anime data from REST API using Retrofit
+- Display anime list using RecyclerView
+- MVVM architecture (ViewModel, Repository)
+- Clean and simple XML-based UI
+- Image loading using Glide
+- Basic error handling
+
+---
+
+## 🧠 Architecture
+- UI Layer: Activity / Fragment
+- ViewModel: Handles UI-related logic
+- Repository: Manages data from API
+- Data Layer: API service & models
+
 ---
 
 ## 🛠️ Tech Stack
-- **Kotlin**
-- **XML Layout**
-
-##  Concepts Covered
-- API Integration
-- RecyclerView + Adapter
-- Kotlin basics
-- Networks calls
-- Clean UI components
+- Kotlin
+- XML Layouts
+- Retrofit
+- RecyclerView
+- Glide
+- MVVM Architecture
 
 ---
