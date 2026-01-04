@@ -39,3 +39,19 @@ This project was built to strengthen my understanding of:
 - Clean Android app structure  
 
 ---
+
+## 📸 Screenshots
+
+### Home Screen
+![Home Screen](screenshots/home_screen.png)
+
+### Detail Screen
+![Detail Screen](screenshots/detail_screen.png)
+
+### Favorite Screen
+![Favorite Screen](screenshots/favorite_screen.png)
+
+
+
+
+
