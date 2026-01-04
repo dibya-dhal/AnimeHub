@@ -32,4 +32,10 @@ This project focuses on clean architecture, proper separation of concerns, and m
 - Glide
 - MVVM Architecture
 
+# 📂 Project Purpose
+This project was built to strengthen my understanding of:
+- MVVM architecture
+- REST API integration
+- Clean Android app structure  
+
 ---
